@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-05-2022 a las 01:55:21
+-- Tiempo de generación: 07-05-2022 a las 04:28:20
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.8
 
@@ -24,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `animal`
+-- Estructura de tabla para la tabla `animales`
 --
 
-CREATE TABLE `animal` (
+CREATE TABLE `animales` (
   `id` int(11) NOT NULL,
   `especie` varchar(32) NOT NULL,
   `edad` varchar(32) NOT NULL,
@@ -39,10 +39,10 @@ CREATE TABLE `animal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Volcado de datos para la tabla `animal`
+-- Volcado de datos para la tabla `animales`
 --
 
-INSERT INTO `animal` (`id`, `especie`, `edad`, `ubicacion`, `descripcion`, `foto`, `created_at`, `updated_at`) VALUES
+INSERT INTO `animales` (`id`, `especie`, `edad`, `ubicacion`, `descripcion`, `foto`, `created_at`, `updated_at`) VALUES
 (9, 'Perro', '1 año', 'Colonia centro', 'Perrito shiba inu japones', 'g305uFvGG8oiy6B723Qon7ck2aNy0vfnOzV9wxro.jpg', '2022-05-07 06:35:16', '2022-05-07 06:35:16');
 
 --
@@ -50,9 +50,9 @@ INSERT INTO `animal` (`id`, `especie`, `edad`, `ubicacion`, `descripcion`, `foto
 --
 
 --
--- Indices de la tabla `animal`
+-- Indices de la tabla `animales`
 --
-ALTER TABLE `animal`
+ALTER TABLE `animales`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -60,9 +60,9 @@ ALTER TABLE `animal`
 --
 
 --
--- AUTO_INCREMENT de la tabla `animal`
+-- AUTO_INCREMENT de la tabla `animales`
 --
-ALTER TABLE `animal`
+ALTER TABLE `animales`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
