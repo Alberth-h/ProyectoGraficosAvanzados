@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/animal', [APIAnimalesController::class, 'index'])->name('api.animales.index');
+Route::get('/animal/{id}', [APIAnimalesController::class, 'show'])->name('api.animales.show');
