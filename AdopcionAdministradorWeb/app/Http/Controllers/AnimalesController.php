@@ -57,7 +57,13 @@ class AnimalesController extends Controller
             $animal->edad = $request->input('edad');
             $animal->ubicacion = $request->input('ubicacion');
             $animal->descripcion = $request->input('descripcion');
-            $animal->foto = $request->input('foto');
+            
+            if ($request->file('foto')) {
+                $path_foto = $request->file('foto')->store('public/fotos');
+                if ($path_foto) {
+                    $animal->foto = $request->file('foto')->hashName();
+                }
+            }
 
             if ($animal->save()) {
                 return redirect()->route('animales.index', $animal->id)->with('exito', 'Se actualizo correctamente');

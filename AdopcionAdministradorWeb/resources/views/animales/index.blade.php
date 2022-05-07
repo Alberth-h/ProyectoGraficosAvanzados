@@ -34,7 +34,7 @@
                     <td>{{$animal->descripcion}}</td>
                     <!-- <td>{{$animal->foto}}</td> -->
                     <td>
-                        <form method="post" action="{{ route('animales.destroy', $animal->id) }}">
+                        <form method="POST" action="{{ route('animales.destroy', $animal->id) }}">
                             @csrf
                             @method('delete')
                             <a href="{{ route('animales.edit', $animal->id) }}">Editar</a>
